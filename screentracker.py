@@ -101,6 +101,7 @@ def get_stock_tickers():
     return all_tickers
 
 
+
 # --- 3. Data Fetching and Processing Function ---
 
 def get_stock_data(tickers):
@@ -235,10 +236,10 @@ def run_screener():
         print(final_results[[
             'Company',
             'Sector',
-            'P/E',  # <-- BACK TO P/E
+            'P/E',  
             'P/B',
             'DivYield',
-            'AvgVolume',  # <-- ADDED
+            'AvgVolume', 
             'Current Price',
             '200-DMA'
         ]])
