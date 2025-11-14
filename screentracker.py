@@ -91,10 +91,10 @@ def get_stock_tickers():
     print("\n--- Phase 1: Fetching Ticker Lists ---")
 
     # We will test with a small slice (e.g., 10 from each)
-    # To run the full list, remove "[:10]"
+    # To run the full list, remove "[:xx]"
     # WARNING: The full list (600+ stocks) will take over 10 minutes to run!
-    sp500 = get_sp500_tickers()[:50]
-    ftse100 = get_ftse100_tickers()[:50]
+    sp500 = get_sp500_tickers()[:20]
+    ftse100 = get_ftse100_tickers()[:20]
 
     all_tickers = sp500 + ftse100
     print(f"\nTotal tickers to analyze: {len(all_tickers)}")
@@ -216,7 +216,7 @@ def run_screener():
             conditie_pb &
             conditie_div &
             conditie_ma &
-            conditie_volum &  # <-- USING VOLUME
+            conditie_volum & 
             conditie_validitate &
             conditie_ma_validitate
     )
