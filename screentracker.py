@@ -199,10 +199,10 @@ def run_screener():
 
     # Create the filtering conditions
     # Ensure conversion to numeric type, just in case
-    conditie_pe = pd.to_numeric(df['P/E']) < MAX_PE_RATIO  # <-- REPLACED PEG with P/E
+    conditie_pe = pd.to_numeric(df['P/E']) < MAX_PE_RATIO 
     conditie_pb = pd.to_numeric(df['P/B']) < MAX_PB_RATIO
     conditie_div = pd.to_numeric(df['DivYield']) > MIN_DIV_YIELD
-    conditie_volum = pd.to_numeric(df['AvgVolume']) > MIN_AVG_VOLUME  # <-- ADDED VOLUME FILTER
+    conditie_volum = pd.to_numeric(df['AvgVolume']) > MIN_AVG_VOLUME 
 
     # Our Technical Analysis filter
     conditie_ma = pd.to_numeric(df['Current Price']) > pd.to_numeric(df['200-DMA'])
