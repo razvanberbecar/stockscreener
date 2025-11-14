@@ -1,0 +1,43 @@
+This is a Python script that scans over 600 stocks from the S&P 500 (NYSE) and FTSE 100 (LSE) to find high-quality, liquid companies that fit a "Growth at a Reasonable Price" (GARP) investment model.
+
+The tool automates the entire analysis process:
+
+Fetches an up-to-date list of all companies from Wikipedia.
+
+Gathers key financial data for each stock from Yahoo Finance.
+
+Filters the list through a multi-layered set of rules.
+
+Exports the final "buy" candidates to a timestamped CSV file.
+
+The Investment Strategy
+
+This screener is designed to find "unicorns": companies that are high-quality, have a strong uptrend, and are still reasonably priced. A stock must pass all of the following filters to be included in the results:
+
+Fundamental Filters (Value & Quality):
+
+P/E Ratio < 25: Filters out "expensive" stocks.
+
+P/B Ratio < 1.5: Finds companies that are cheap relative to their net assets.
+
+Dividend Yield > 2%: Ensures the company is profitable, stable, and returns cash to shareholders.
+
+Technical Filter (Trend):
+
+Current Price > 200-Day Moving Average: This is a crucial safety filter to avoid "value traps" (cheap stocks that are in a free-fall). It selects only stocks that are in a confirmed long-term uptrend.
+
+Liquidity Filter (Safety):
+
+Average Volume > 100,000: Ensures the stock is tradable by filtering out illiquid, high-risk companies.
+
+Technology Used
+
+Python 3
+
+Pandas: For data manipulation, analysis, and calculating the 200-DMA.
+
+yfinance: For fetching all stock financial data and price history from the Yahoo Finance API.
+
+Requests: For making HTTP requests to Wikipedia with custom headers to prevent blocking.
+
+lxml & html5lib: Parsers used by Pandas to read the HTML tables.
