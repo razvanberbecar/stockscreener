@@ -16,9 +16,13 @@ This screener is designed to find "unicorns": companies that are high-quality, h
 
 Fundamental Filters (Value & Quality):
 
-P/E Ratio < 25: Filters out "expensive" stocks.
+P/E Ratio < 25: Filters out "expensive" stocks. (P/E = Current Price / Earnings Per Share. If it is high, it
+means investors are paying more for each unit of net income, which could indicate overvaluation. Or it could mean high growth expectations.
+Either way, a lower P/E is generally preferred for value investing.)
 
-P/B Ratio < 1.5: Finds companies that are cheap relative to their net assets.
+P/B Ratio < 1.5: Finds companies that are cheap relative to their net assets. (P/B = Current Price / Book Value Per Share.
+If P/B < 1, it means you are looking for stocks where the market price is less than the accounting value of the company's assets.
+You are theoretically buying the company for less than its parts are worth. Good luck finding such stocks!)
 
 Dividend Yield > 2%: Ensures the company is profitable, stable, and returns cash to shareholders.
 
